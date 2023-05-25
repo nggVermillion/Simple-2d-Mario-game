@@ -1,0 +1,31 @@
+body {
+    margin-top: 2vh;
+    background: black;
+    color: #f8f8f8;
+}
+
+canvas {
+    background: rgb(41, 120, 237);
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  #normalPlayer{
+    height: 150px;
+    width: 150px;
+    display: none;
+  }
+
+  #beforeJumpPlayer{
+    height: 150px;
+    width: 150px;
+    display: none;
+  }
+
+  #inAirPlayer{
+    height: 150px;
+    width: 150px;
+    display: none;   
+  }
