@@ -1,4 +1,4 @@
-const state = {
+export const state = {
     STANDING: 0,
     RUNNING: 2,
     JUMPING: 1,

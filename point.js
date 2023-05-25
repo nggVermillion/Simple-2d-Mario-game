@@ -21,4 +21,8 @@ export class Point{
     getY(){
         return this.y;
     }
+
+    setX(x){
+        this.x = x;
+    }
 }

@@ -1,4 +1,5 @@
 import {Player} from "./player.js";
+import { Platform } from "./platform.js";
 
 window.addEventListener("load", function(){
     const canvas = document.getElementById("body");
@@ -18,6 +19,7 @@ window.addEventListener("load", function(){
             this.width = width;
             this.height = height;
             this.player = new Player(this);
+            this.platform = new Platform(this.player, ctx, this.width/5, 780, 400, 100);
             this.floor = 1100;
         }
 
@@ -34,6 +36,8 @@ window.addEventListener("load", function(){
             drawCloud();
             drawBrush();
             drawSmallHill();
+            this.platform.draw();
+            this.platform.collosionDetection();
 
             this.player.update(deltaTime);
 
@@ -54,7 +58,6 @@ window.addEventListener("load", function(){
         if(deltaTime>0.15){
             deltaTime = 0.15;
         }
-
         game.draw(ctx);
 
 

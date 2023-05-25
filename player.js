@@ -56,6 +56,18 @@ export class Player {
         }
         return false;
     }
+    checkCollision(x, y, width, height){
+        playerLeft = this.position.getX();
+        playerRight = this.position.getX() + this.width;
+        objectLeft = x;
+        objectRight = x+width;
+        objectTop = y;
+        playerBottom = this.position.getY() + this.height;
+        if((playerLeft>=objectLeft && playerRight <= objectRight) && playerBottom <= objectTop){
+            return true;
+        }
+        return false;
+    }
 }
 
 window.addEventListener("keydown", function(event){
